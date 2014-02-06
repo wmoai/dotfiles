@@ -20,6 +20,8 @@ NeoBundle 'vim-javascript'
 NeoBundle 'yaml.vim'
 NeoBundle 'python.vim'
 
+NeoBundle 'w0ng/vim-hybrid'
+
 " =====================================================
 "  neocomplcache
 " =====================================================
@@ -75,7 +77,8 @@ set incsearch
 nnoremap <silent> gh :let @/=''<CR>
 
 "=== display ===
-colorscheme default
+let g:hybrid_use_iTerm_colors = 1
+colorscheme hybrid
 set showmatch
 set showcmd
 set number
