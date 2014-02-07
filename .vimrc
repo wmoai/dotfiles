@@ -16,7 +16,6 @@ NeoBundle 'vtreeexplorer'
 NeoBundle 'php.vim'
 NeoBundle 'phtml.vim'
 NeoBundle 'EasyHtml.vim'
-NeoBundle 'vim-javascript'
 NeoBundle 'yaml.vim'
 NeoBundle 'python.vim'
 
@@ -55,6 +54,13 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 
+" =====================================================
+"  simple-javascript-indenter
+" =====================================================
+NeoBundle 'jiangmiao/simple-javascript-indenter'
+let g:SimpleJsIndenter_BriefMode = 1
+let g:SimpleJsIndenter_CaseIndentLevel = -1
+" =====================================================
 
 filetype plugin indent on
 
