@@ -11,7 +11,6 @@ NeoBundle 'L9'
 
 NeoBundle 'commentToggle'
 NeoBundle 'FuzzyFinder'
-NeoBundle 'vtreeexplorer'
 
 NeoBundle 'php.vim'
 NeoBundle 'phtml.vim'
@@ -60,7 +59,18 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
+
 " =====================================================
+"  vim-node 
+" =====================================================
+NeoBundle 'moll/vim-node'
+autocmd User Node
+  \ if &filetype == "javascript" |
+  \   nmap <buffer> gf <Plug>NodeTabGotoFile |
+  \ endif
+
+NeoBundle 'scrooloose/syntastic'
+
 
 filetype plugin indent on
 
@@ -94,13 +104,8 @@ set laststatus=2
 highlight StatusLine term=NONE cterm=NONE ctermfg=black ctermbg=gray
 syntax on
 
-"縦分割
-let g:treeExplVertical=1
-"分割したウィンドウのサイズ
-let g:treeExplWinSize=50
-
 "--------------------------------------------
-" 文字コード設定
+"  encoding
 "--------------------------------------------
 if &encoding !=# 'utf-8'
   set encoding=japan
@@ -137,7 +142,7 @@ if has('iconv')
    unlet s:enc_euc
    unlet s:enc_jis
 endif
-" utf-8優先
+" utf-8 priority up
 let &fileencodings = substitute(&fileencodings, 'utf-8', '_utf-8', 'g')
 let &fileencodings = substitute(&fileencodings, 'cp932', 'utf-8', 'g')
 let &fileencodings = substitute(&fileencodings, '_utf-8', 'cp932', 'g')
