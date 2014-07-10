@@ -17,8 +17,10 @@ NeoBundle 'phtml.vim'
 NeoBundle 'EasyHtml.vim'
 NeoBundle 'yaml.vim'
 NeoBundle 'python.vim'
+NeoBundle 'jade.vim'
 
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " =====================================================
 "  neocomplcache
