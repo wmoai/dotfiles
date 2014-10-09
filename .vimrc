@@ -17,7 +17,8 @@ NeoBundle 'phtml.vim'
 NeoBundle 'EasyHtml.vim'
 NeoBundle 'yaml.vim'
 NeoBundle 'python.vim'
-NeoBundle 'jade.vim'
+NeoBundle 'digitaltoad/vim-jade.git'
+NeoBundle 'elzr/vim-json'
 
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -71,6 +72,9 @@ autocmd User Node
   \   nmap <buffer> gf <Plug>NodeTabGotoFile |
   \ endif
 
+" =====================================================
+"  syntastic
+" =====================================================
 NeoBundle 'scrooloose/syntastic'
 
 
