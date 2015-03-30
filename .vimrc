@@ -10,7 +10,6 @@ endif
 NeoBundle 'L9'
 
 NeoBundle 'commentToggle'
-NeoBundle 'FuzzyFinder'
 
 NeoBundle 'php.vim'
 NeoBundle 'phtml.vim'
@@ -19,6 +18,7 @@ NeoBundle 'yaml.vim'
 NeoBundle 'python.vim'
 NeoBundle 'digitaltoad/vim-jade.git'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'mxw/vim-jsx'
 
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'kchmck/vim-coffee-script'
