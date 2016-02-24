@@ -11,6 +11,7 @@ NeoBundle 'L9'
 
 NeoBundle 'commentToggle'
 
+NeoBundle 'fatih/vim-go'
 NeoBundle 'php.vim'
 NeoBundle 'phtml.vim'
 NeoBundle 'EasyHtml.vim'
@@ -19,9 +20,16 @@ NeoBundle 'python.vim'
 NeoBundle 'digitaltoad/vim-jade.git'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'othree/yajs.vim'
 
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kentaroi/cocoa.vim'
+
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
 
 " =====================================================
 "  neocomplcache
