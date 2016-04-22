@@ -4,7 +4,7 @@ filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle'))
+  call neobundle#begin(expand('~/.vim/bundle'))
 endif
 
 NeoBundle 'L9'
@@ -19,10 +19,10 @@ NeoBundle 'yaml.vim'
 NeoBundle 'python.vim'
 NeoBundle 'digitaltoad/vim-jade.git'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'othree/yajs.vim'
 
-NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kentaroi/cocoa.vim'
 
@@ -65,13 +65,6 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 
 " =====================================================
-"  simple-javascript-indenter
-" =====================================================
-NeoBundle 'jiangmiao/simple-javascript-indenter'
-let g:SimpleJsIndenter_BriefMode = 1
-let g:SimpleJsIndenter_CaseIndentLevel = -1
-
-" =====================================================
 "  vim-node 
 " =====================================================
 NeoBundle 'moll/vim-node'
@@ -97,6 +90,8 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+set list
+set listchars=tab:>-
 
 "=== search ===
 set wrapscan
@@ -108,6 +103,7 @@ nnoremap <silent> gh :let @/=''<CR>
 
 "=== display ===
 let g:hybrid_use_iTerm_colors = 1
+set background=dark
 colorscheme hybrid
 set showmatch
 set showcmd
@@ -159,4 +155,7 @@ function PHPLint()
     echo result
 endfunction
 
+if has('vim_starting')
+  call neobundle#end()
+endif
 
