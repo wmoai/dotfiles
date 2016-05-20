@@ -22,6 +22,7 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'othree/yajs.vim'
+au BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kentaroi/cocoa.vim'
