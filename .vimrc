@@ -31,6 +31,8 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
+noremap <C-j> <esc>
+noremap! <C-j> <esc>
 
 " =====================================================
 "  neocomplcache
