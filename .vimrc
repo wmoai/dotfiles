@@ -17,10 +17,10 @@ NeoBundle 'phtml.vim'
 NeoBundle 'EasyHtml.vim'
 NeoBundle 'yaml.vim'
 NeoBundle 'python.vim'
-NeoBundle 'digitaltoad/vim-jade.git'
 NeoBundle 'elzr/vim-json'
-NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'digitaltoad/vim-pug'
+au BufRead,BufNewFile,BufReadPre *.pug set filetype=pug
 NeoBundle 'othree/yajs.vim'
 au BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 
@@ -80,6 +80,12 @@ autocmd User Node
 "  syntastic
 " =====================================================
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
+let g:syntastic_javascript_checkers=['eslint']
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" =====================================================
 
 
 filetype plugin indent on
