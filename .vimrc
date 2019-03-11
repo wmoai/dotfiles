@@ -33,7 +33,7 @@ Plugin 'phtml.vim'
 Plugin 'EasyHtml.vim'
 Plugin 'yaml.vim'
 Plugin 'python.vim'
-Plugin 'leshill/vim-json'
+Plugin 'elzr/vim-json'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " =====================================================
@@ -117,14 +117,11 @@ autocmd User Node
   \ endif
 
 " =====================================================
-"  syntastic
+"  ale
 " =====================================================
-Plugin 'scrooloose/syntastic'
-Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
-let g:syntastic_javascript_checkers=['eslint']
-
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+Plugin 'w0rp/ale'
+let b:ale_fixers = {'javascript': ['eslint']}
+let b:ale_fixers = {'typescript': ['eslint']}
 " =====================================================
 
 
