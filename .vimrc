@@ -1,43 +1,83 @@
 set nocompatible
 set backspace=2
 filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle'))
-endif
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'wincent/command-t'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
 
-NeoBundle 'L9'
 
-NeoBundle 'commentToggle'
+Plugin 'L9'
 
-NeoBundle 'fatih/vim-go'
-NeoBundle 'php.vim'
-NeoBundle 'phtml.vim'
-NeoBundle 'EasyHtml.vim'
-NeoBundle 'yaml.vim'
-NeoBundle 'python.vim'
-NeoBundle 'elzr/vim-json'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'digitaltoad/vim-pug'
-au BufRead,BufNewFile,BufReadPre *.pug set filetype=pug
-NeoBundle 'othree/yajs.vim'
-au BufRead,BufNewFile *.jsx set filetype=javascript.jsx
+Plugin 'commentToggle'
+Plugin 'fatih/vim-go'
+Plugin 'php.vim'
+Plugin 'phtml.vim'
+Plugin 'EasyHtml.vim'
+Plugin 'yaml.vim'
+Plugin 'python.vim'
+Plugin 'leshill/vim-json'
+Plugin 'ctrlpvim/ctrlp.vim'
 
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'kentaroi/cocoa.vim'
+" =====================================================
+"  javascript
+" =====================================================
+Plugin 'pangloss/vim-javascript'
+" =====================================================
 
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
+" =====================================================
+"  typescript
+" =====================================================
+Plugin 'leafgarland/typescript-vim'
+autocmd BufRead,BufNewFile *.ts,*.tsx set filetype=typescript
+" =====================================================
 
-noremap <C-j> <esc>
-noremap! <C-j> <esc>
+" =====================================================
+"  pug
+" =====================================================
+Plugin 'digitaltoad/vim-pug'
+au BufRead,BufNewFile,BufReadPre *.jade,*.pug set filetype=pug
+autocmd FileType pug    setlocal sw=4 sts=4 ts=4 et
+" =====================================================
+
+" =====================================================
+"  coffee script
+" =====================================================
+Plugin 'kchmck/vim-coffee-script'
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+" autocmd BufWritePost *.coffee silent make!
+" autocmd QuickFixCmdPost * nested cwindow | redraw!
+" nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
+" =====================================================
+
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'kentaroi/cocoa.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'kannokanno/previm'
+Plugin 'tyru/open-browser.vim'
 
 " =====================================================
 "  neocomplcache
 " =====================================================
-NeoBundle 'Shougo/neocomplcache'
+Plugin 'Shougo/neocomplcache'
 let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
@@ -64,13 +104,13 @@ inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 " =====================================================
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 
 " =====================================================
 "  vim-node 
 " =====================================================
-NeoBundle 'moll/vim-node'
+Plugin 'moll/vim-node'
 autocmd User Node
   \ if &filetype == "javascript" |
   \   nmap <buffer> gf <Plug>NodeTabGotoFile |
@@ -79,8 +119,8 @@ autocmd User Node
 " =====================================================
 "  syntastic
 " =====================================================
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
 let g:syntastic_javascript_checkers=['eslint']
 
 let g:syntastic_check_on_open = 1
@@ -88,10 +128,22 @@ let g:syntastic_check_on_wq = 0
 " =====================================================
 
 
+call vundle#end()
 filetype plugin indent on
+
+noremap <C-j> <esc>
+noremap! <C-j> <esc>
 
 au QuickfixCmdPost vimgrep cw
 set noswapfile
+
+"=== search ===
+set wrapscan
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+nnoremap <silent> gh :let @/=''<CR>
 
 "=== indent ===
 set autoindent smartindent
@@ -101,14 +153,6 @@ set shiftwidth=2
 set expandtab
 set list
 set listchars=tab:>-
-
-"=== search ===
-set wrapscan
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-nnoremap <silent> gh :let @/=''<CR>
 
 "=== display ===
 let g:hybrid_use_iTerm_colors = 1
@@ -164,7 +208,4 @@ function PHPLint()
     echo result
 endfunction
 
-if has('vim_starting')
-  call neobundle#end()
-endif
 
