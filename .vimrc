@@ -27,6 +27,22 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'L9'
 
 Plugin 'commentToggle'
+
+" =====================================================
+"  vim-aireline
+" =====================================================
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#formatter = 'jsformatter'
+let g:airline_theme='term'
+let g:airline#extensions#tabline#tabs_label = ''
+let g:airline#extensions#tabline#buffers_label = ''
+" =====================================================
+
 Plugin 'fatih/vim-go'
 Plugin 'php.vim'
 Plugin 'phtml.vim'
@@ -154,6 +170,7 @@ set listchars=tab:>-
 "=== display ===
 let g:hybrid_use_iTerm_colors = 1
 set background=dark
+" https://github.com/w0ng/vim-hybrid
 colorscheme hybrid
 set showmatch
 set showcmd
