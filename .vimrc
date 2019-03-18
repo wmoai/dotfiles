@@ -89,6 +89,9 @@ Plugin 'kentaroi/cocoa.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kannokanno/previm'
 Plugin 'tyru/open-browser.vim'
+Plugin 'Quramy/vim-js-pretty-template'
+
+Plugin 'cocopon/vaffle.vim'
 
 " =====================================================
 "  neocomplcache
