@@ -94,6 +94,16 @@ Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'cocopon/vaffle.vim'
 
 " =====================================================
+"  prettier
+" =====================================================
+Plugin 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+" =====================================================
+
+" =====================================================
 "  neocomplcache
 " =====================================================
 Plugin 'Shougo/neocomplcache'
