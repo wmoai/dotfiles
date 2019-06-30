@@ -1,0 +1,18 @@
+{
+  "workbench.colorTheme": "Hybrid",
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    { "language": "vue" },
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.editor.labelFormat": "short",
+  "javascript.suggest.autoImports": false,
+  "typescript.suggest.autoImports": false
+}

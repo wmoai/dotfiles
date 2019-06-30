@@ -51,6 +51,8 @@ Plugin 'yaml.vim'
 Plugin 'python.vim'
 Plugin 'elzr/vim-json'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'posva/vim-vue'
+autocmd FileType vue syntax sync fromstart
 
 " =====================================================
 "  javascript
