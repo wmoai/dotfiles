@@ -1,18 +1,17 @@
 {
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+  "window.zoomLevel": 0,
   "workbench.colorTheme": "Hybrid",
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
   "editor.formatOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "eslint.validate": [
-    "javascript",
-    { "language": "vue" },
-    { "language": "typescript", "autoFix": true },
-    { "language": "typescriptreact", "autoFix": true }
-  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.editor.labelFormat": "short",
-  "javascript.suggest.autoImports": false,
-  "typescript.suggest.autoImports": false
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.labelFormat": "medium",
+  "explorer.compactFolders": false,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }
