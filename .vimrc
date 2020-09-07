@@ -43,7 +43,6 @@ let g:airline#extensions#tabline#tabs_label = ''
 let g:airline#extensions#tabline#buffers_label = ''
 " =====================================================
 
-Plugin 'fatih/vim-go'
 Plugin 'php.vim'
 Plugin 'phtml.vim'
 Plugin 'EasyHtml.vim'

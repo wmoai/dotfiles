@@ -2,7 +2,7 @@
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Hybrid",
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "editor.tabSize": 2,
   "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
   "editor.formatOnSave": true,
@@ -13,5 +13,25 @@
   "explorer.compactFolders": false,
   "css.validate": false,
   "less.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "launch": {
+    "version": "0.2.0",
+    "compounds": [
+      {
+        "name": "Compound",
+        "configurations": []
+      }
+    ]
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    }
+  ],
+  "editor.parameterHints.enabled": false
 }
