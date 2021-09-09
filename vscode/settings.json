@@ -33,5 +33,6 @@
       "commands": ["redo"]
     }
   ],
-  "editor.parameterHints.enabled": false
+  "editor.parameterHints.enabled": false,
+  "editor.accessibilitySupport": "off"
 }

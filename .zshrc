@@ -1,5 +1,6 @@
 alias ll='ls -lG'
 alias tailf='tail -f'
+alias tmux='tmux -u'
 
 setopt nonomatch
 
