@@ -14,6 +14,7 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
+  "stylelint.validate": ["css", "scss", "typescriptreact"],
   "launch": {
     "version": "0.2.0",
     "compounds": [
@@ -34,5 +35,7 @@
     }
   ],
   "editor.parameterHints.enabled": false,
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": false,
+  "json.schemas": []
 }
