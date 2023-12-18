@@ -1,6 +1,5 @@
 {
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
   "workbench.colorTheme": "Hybrid",
   "editor.fontSize": 16,
   "editor.tabSize": 2,
@@ -34,8 +33,26 @@
       "commands": ["redo"]
     }
   ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "t"],
+      "after": ["<Esc>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["g", "T"],
+      "after": ["<Esc>"],
+      "commands": ["workbench.action.previousEditor"]
+    }
+  ],
   "editor.parameterHints.enabled": false,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": false,
-  "json.schemas": []
+  "json.schemas": [],
+  "cSpell.userWords": ["Axios", "clsx", "linkify", "wizleap"],
+  "vue.codeActions.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.editor.tabSizing": "fixed",
+  "workbench.editor.tabSizingFixedMaxWidth": 200
 }
